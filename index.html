@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pomChat</title>
+	<meta name="description" content="javascript入門として、chatを作成しました。">
+	<script>
+		const item = {
+			"てち":"てちてち",
+			"もでぃ":"もでぃもでぃ",
+			"うぷ":"うぷうぷ",
+			"ねむ":"ねむちゃんマン",
+			"やさしい":"天使だから",
+			"なで":"なでなで",
+			"にゃん":"にゃんにゃん",
+			"わん":"わんわん",
+			"もく":"かふぇもくする？",
+			"おなかすいた": "おなすい"
+		};
+		const onformInput = function() {
+			target = document.getElementById("output");
+			target.text = document.forms.id_form.form_box.value;
+			console.log(target.text);
+		}
+	</script>
+</head>
+<body>
+	<form name="form" id="id_form">
+		<input type="text" id="form_box" size="30" maxlength="20">
+		<input type="button" value="ぽち" onclick="onformInput();">
+	</form>
+	<div id="output">
+		<script></script>
+	</div>
+</body>
+</html>

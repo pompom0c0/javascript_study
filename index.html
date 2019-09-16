@@ -6,33 +6,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>pomChat</title>
 	<meta name="description" content="javascript入門として、chatを作成しました。">
-	<script>
-		const item = {
-			"てち":"てちてち",
-			"もでぃ":"もでぃもでぃ",
-			"うぷ":"うぷうぷ",
-			"ねむ":"ねむちゃんマン",
-			"やさしい":"天使だから",
-			"なで":"なでなで",
-			"にゃん":"にゃんにゃん",
-			"わん":"わんわん",
-			"もく":"かふぇもくする？",
-			"おなかすいた": "おなすい"
-		};
-		const onformInput = function() {
-			target = document.getElementById("output");
-			target.text = document.forms.id_form.form_box.value;
-			console.log(target.text);
-		}
-	</script>
 </head>
 <body>
 	<form name="form" id="id_form">
-		<input type="text" id="form_box" size="30" maxlength="20">
-		<input type="button" value="ぽち" onclick="onformInput();">
+		<input type="form" id="form_box" size="30" maxlength="20">
+		<input type="button" value="EXEC" onclick="getFormInput()">
 	</form>
 	<div id="output">
-		<script></script>
 	</div>
+	<script>
+		const getFormInput = () => {
+			target = document.getElementById('output');
+			input = document.getElementById('form_box').value;
+			if(input === "てち") {
+				target.innerHTML = "てちてち";
+			} else if (input === "もでぃ") {
+				target.innerHTML = "もでぃもでぃする？";
+			} else if (input === "うぷ") {
+				target.innerHTML = "うぷうぷ"
+			} else if (input === "ねむ") {
+				target.innerHTML = "ねむちゃんマン";
+			} else if (input === "やさしい") {
+				target.innerHTML = "天使だから";
+			} else if (input === "おなすい") {
+				target.innerHTML = "おなかすいた";
+			} else {
+				target.innerHTML= "その文字列はないです";
+			}
+		}
+	</script>
 </body>
 </html>

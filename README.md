@@ -1,1 +1,1 @@
-pomChat
+JavaScript練習用リポジトリ

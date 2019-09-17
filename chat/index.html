@@ -15,6 +15,21 @@
 	<div id="output">
 	</div>
 	<script>
+		class Profile {
+			constructor(firstName, lastName, blood) {
+				this.firstName = firstName;
+				this.lastName = lastName;
+				this.blood = blood;
+			}
+			info() {
+				console.log(`下の名前は${this.firstName}です`);
+				console.log(`苗字は${this.lastName}です`);
+				console.log(`血液型は${this.blood}です`);
+			}
+		}
+		const profile = new Profile("美咲", "本田", "AB");
+		profile.info();
+
 		const getFormInput = () => {
 			target = document.getElementById('output');
 			input = document.getElementById('form_box').value;

@@ -15,38 +15,31 @@
 	<div id="output">
 	</div>
 	<script>
-		class Profile {
-			constructor(firstName, lastName, blood) {
-				this.firstName = firstName;
-				this.lastName = lastName;
-				this.blood = blood;
-			}
-			info() {
-				console.log(`下の名前は${this.firstName}です`);
-				console.log(`苗字は${this.lastName}です`);
-				console.log(`血液型は${this.blood}です`);
-			}
-		}
-		const profile = new Profile("美咲", "本田", "AB");
-		profile.info();
-
 		const getFormInput = () => {
 			target = document.getElementById('output');
 			input = document.getElementById('form_box').value;
-			if(input === "てち") {
-				target.innerHTML = "てちてち";
-			} else if (input === "もでぃ") {
-				target.innerHTML = "もでぃもでぃする？";
-			} else if (input === "うぷ") {
-				target.innerHTML = "うぷうぷ"
-			} else if (input === "ねむ") {
-				target.innerHTML = "ねむちゃんマン";
-			} else if (input === "やさしい") {
-				target.innerHTML = "天使だから";
-			} else if (input === "おなすい") {
-				target.innerHTML = "おなかすいた";
-			} else {
-				target.innerHTML= "その文字列はないです";
+			switch(input) {
+				case "てち":
+					target.innerHTML = "てちてち";
+					break;
+				case "もでぃ":
+					target.innerHTML = "もでぃもでぃする？";
+					break;
+				case "うぷ":
+					target.innerHTML = "うぷうぷ"
+					break;
+				case "ねむ":
+					target.innerHTML = "ねむちゃんマン";
+					break;
+				case "やさしい":
+					target.innerHTML = "天使だから";
+					break;
+				case "おなすい":
+					target.innerHTML = "おなかすいた";
+					break;
+				default:
+					target.innerHTML= "その文字列はないです";
+					break;
 			}
 		}
 	</script>

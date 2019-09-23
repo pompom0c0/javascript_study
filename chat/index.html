@@ -8,39 +8,56 @@
 	<meta name="description" content="javascript入門として、chatを作成しました。">
 </head>
 <body>
-	<form name="form" id="id_form">
+	<div id="main">
 		<input type="form" id="form_box" size="30" maxlength="20">
-		<input type="button" value="EXEC" onclick="getFormInput()">
-	</form>
-	<div id="output">
+		<input type="button" value="EXEC" onclick="addFormText();">
 	</div>
 	<script>
-		const getFormInput = () => {
-			target = document.getElementById('output');
-			input = document.getElementById('form_box').value;
-			switch(input) {
+		const formoutput = {
+			techi: "てちてち",
+			modi: "もでぃもでぃする？",
+			up: "うぷうぷ",
+			nemu: "ねむちゃんマン",
+			yasashi: "天使だから",
+			onasui: "おなかすいた"
+		};
+
+		const addFormText = () => {
+			const forminput = document.getElementById('form_box').value;
+			main = document.getElementById('main');
+
+			var textinput = document.createTextNode(forminput);
+			var pNodeinput = document.createElement('p');
+			var pNodeoutput = document.createElement('p');
+
+			pNodeinput.appendChild(textinput);
+			main.appendChild(pNodeinput);
+
+			switch(forminput) {
 				case "てち":
-					target.innerHTML = "てちてち";
+					var textoutput = document.createTextNode(formoutput.techi);
 					break;
 				case "もでぃ":
-					target.innerHTML = "もでぃもでぃする？";
+					var textoutput = document.createTextNode(formoutput.modi);
 					break;
 				case "うぷ":
-					target.innerHTML = "うぷうぷ"
+					var textoutput = document.createTextNode(formoutput.up);
 					break;
 				case "ねむ":
-					target.innerHTML = "ねむちゃんマン";
+					var textoutput = document.createTextNode(formoutput.nemu);
 					break;
 				case "やさしい":
-					target.innerHTML = "天使だから";
+					var textoutput = document.createTextNode(formoutput.yasashi);
 					break;
 				case "おなすい":
-					target.innerHTML = "おなかすいた";
+					var textoutput = document.createTextNode(formoutput.onasui);
 					break;
 				default:
-					target.innerHTML= "その文字列はないです";
+					var textoutput = document.createTextNode("その文字列はないです");
 					break;
 			}
+			pNodeoutput.appendChild(textoutput);
+			main.appendChild(pNodeoutput);
 		}
 	</script>
 </body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pomChat</title>
+	<meta name="description" content="javascript入門として、chatを作成しました。">
+</head>
+<body>
+	<script>
+		// 配列
+		const item = ["西野七瀬", "白石麻衣", "橋本奈々未"];
+		console.log(item[1]);
+		// オブジェクト
+		const nogi = {naachan: "西野七瀬", maiyan: "白石麻衣", nanamin: "橋本奈々未"};
+		console.log(nogi.naachan);
+
+		const sakamichi = [
+			{naachan: "西野七瀬", maiyan: "白石麻衣", nanamin: "橋本奈々未"},
+			{techi: "平井友梨奈", yuipon: "小林由依", habu: "土井瑞穂"}
+		];
+		console.log(sakamichi[0].nanamin);
+
+		// 関数
+		const greet = (name, age) => {
+			console.log(`こんにちは、乃木坂46の${name}です`);
+			console.log(`今年で${age}歳になりました`);
+		}
+		greet('生田絵梨花', 22);
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>pomChat</title>
+	<meta name="description" content="ハンバーガーメニューの勉強🍔">
+</head>
+<body>
+	<div id="wrapper">
+		<nav class="menu">
+		  <ul>
+			<li><a href="#">メニュー1</a></li>
+			<li><a href="#">メニュー2</a></li>
+			<li><a href="#">メニュー3</a></li>
+			<li><a href="#">メニュー4</a></li>
+			<li><a href="#">メニュー5</a></li>
+		  </ul>
+		</nav>
+	   
+		<button type="button" id="nav-btn" class="hamburger">
+		  <span class="bdr"></span>
+		  <span class="bdr"></span>
+		  <span class="bdr"></span>
+		</button>
+	   
+		<div id="contents">
+		  横幅が768pxになるとハンバーガーメニューが表示されます
+		</div>
+	</div>   
+</body>
+<script>
+	const hamburgerMenu() => {
+		const hamburger = document.querySelector('.hamburger');
+		$hamburger.addEventListener('click', function(){
+			hamburger.classList.toggle('is-active')
+		});
+
+		const wrapper = document.getElementById('wrapper');
+		const navBtn = document.getElementById('nav-btn');
+		navBtn.addEventListener('click', navToggle);
+
+		const navToggle = function() {
+			if(wrapper.classList.contains('nav-open')) {
+				navCloseFunc();
+			} else {
+				navOpenFunc();
+			}
+		}
+
+		const navOpenFunc = function() {
+			wrapper.classList.add('nav-open');
+		}
+		const navCloseFunc = function() {
+			wrapper.classList.remove('nav-open');
+		}
+	}
+</script>
+</html>
